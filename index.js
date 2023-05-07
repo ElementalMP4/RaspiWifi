@@ -17,6 +17,7 @@ app.get("/wifi", (req, res) => {
     let psk = req.query.psk;
     let template = fs.readFileSync('./template.txt').toString();
     let final = template.replace("{{SSID}}", ssid).replace("{{PASSWORD}}", psk);
+    fs.writeFileSync("/etc/wpa_supplicant/wpa_supplicant.conf", final, { encoding: 'utf8', flag: 'w' })
     res.send(final);
 });
 
