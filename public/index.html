@@ -8,7 +8,33 @@
 <body>
     <div class="w3-container w3-red">
         <h1>RaspiSonos WiFi Setup</h1>
-      </div>
+    </div>
+
+    <p>
+        <label>SSID</label>
+        <input class="w3-input" type="text" id="ssid-input">
+    </p>
+    <p>
+        <label>Password</label>
+        <input class="w3-input" type="text" id="psk-input">
+    </p>
+    <p>
+
+    <div id="reboot-modal" class="w3-modal">
+        <div class="w3-modal-content">
+            <header class="w3-container w3-red">
+                <h3>
+                    All done!
+                </h3>
+            </header>
+            <div class="w3-container">
+                <center>
+                    <p>Your settings have been saved! Press the reboot button to implement these settings</p>
+                    <button onclick="reboot()">Reboot Now!</button>
+                </center>
+            </div>
+        </div>
+    </div>
 </body>
 
 <script src="index.js"></script>
