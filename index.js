@@ -19,3 +19,7 @@ app.get("/wifi", (req, res) => {
     let final = template.replace("{{SSID}}", ssid).replace("{{PASSWORD}}", psk);
     res.send(final);
 });
+
+app.listen(port, () => {
+    console.log(`Listening on port ${port}`);
+});
